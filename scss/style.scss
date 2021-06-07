@@ -7,7 +7,8 @@
 h1{
     font-family: 'Gloria Hallelujah', cursive;
     text-align: center;
-    font-size: 50px;
+    font-size: 50px; 
+    animation: tituloGirando 5s infinite;
 }    
 
 body{
@@ -23,7 +24,60 @@ body{
         flex-direction: column;
         justify-content: space-between;
     }
+
+}
+
+#c1{
+    animation: movimientoColumna 6s ease-in-out infinite 1s;
+}
+
+#c2{
+    animation: movimientoColumna 6s ease-in-out infinite 2s;
+}
+#c4{
+    animation: movimientoColumna 6s ease-in-out infinite 3s;
+}
+
+#c5{
+    animation: movimientoColumna 6s ease-in-out infinite 4s;
 }
 
 
 
+
+
+@keyframes tituloGirando {
+    0%{
+        transform: rotate3d(1,50,5,0deg);
+    }
+
+    50%{
+        transform: rotate3d(1,50,5,180deg);
+    }
+
+    100%{
+        transform: rotate3d(1,50,5,360deg);
+    }
+
+}
+
+@keyframes movimientoColumna{
+    
+    0%{
+        transform: translateY(0);
+    }
+
+    25%{
+        transform: translateY(-50px);
+    }
+    50%{
+        transform: translateY(0);
+    }
+    75%{
+        transform: translateY(50px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+    
+}
