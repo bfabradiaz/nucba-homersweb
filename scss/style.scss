@@ -1,0 +1,29 @@
+@mixin flex{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+h1{
+    font-family: 'Gloria Hallelujah', cursive;
+    text-align: center;
+    font-size: 50px;
+}    
+
+body{
+    background-color: #78BBCB;
+}
+
+.globalContainer{
+    @include flex;
+    .column{    
+        height: 400px;
+        padding: 10px;
+        @include flex;       
+        flex-direction: column;
+        justify-content: space-between;
+    }
+}
+
+
+
